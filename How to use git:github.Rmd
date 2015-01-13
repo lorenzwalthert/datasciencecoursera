@@ -34,6 +34,8 @@ git branch              tells you on which branch you are
 git checkout -b trans   creates new branch 
 git remote -v           lists all the url of branch in this wd
 git checkout master     switches back to the master branch
+git branch -D newBr     deletes the local branch newBr
+git push origin --delete fixlocal       deletes the branch remotely
 
 
 ### to know about those commands
