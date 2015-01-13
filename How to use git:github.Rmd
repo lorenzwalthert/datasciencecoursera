@@ -1,0 +1,44 @@
+---
+title: "How to use git/github"
+author: "Lorenz Walthert"
+date: "13. Januar 2015"
+output: html_document
+---
+This provides a short introduction to how to use/sync update git and github. For further deatils, see slides of Coursera class.
+
+# basic, usefull terminal commands
+## directories in general
+pwd             print current working directory
+ls              will list the unhidden files in the current working directory
+ls -al          will list the hidden and unhidden files in the currenct working directory and details about them
+cd xy           changes the directory to the subfolder called xy in the current working directory
+cd ..           changes the wd one level upwards from the current wd
+touch test.txt  creates an empty file with the name *text.txt*
+rm test.txt     removes the corresponding file in current wd
+mdir "new dir"" makes a directory (=folder) 
+rm -r "new dir" removes directory
+echo Hello      prints *Hello*
+date            returns system date
+
+
+## git commands
+### git workflow
+
+git add -A              adds all files in wd folder to the tracking for git and makes them ready to commit
+git remove HEAD xy.txt  removes *xy.txt* from tracking
+git commit -a "message" adds new versions of the documents on the tracking list that has been changed to the local repository
+git push                pushes new versions to github
+
+### git branch
+git branch              tells you on which branch you are
+git checkout -b trans   creates new branch 
+git remote -v           lists all the url of branch in this wd
+git checkout master     switches back to the master branch
+
+
+### to know about those commands
+- first, you need to create files and save them a first time
+- if you did, use git add -A and then "git commit -a "message" in order to save them in you local repository
+- change the file and save it (not save as), but overwrite. and use "git add -A" and "git commit -a "message" "
+- if you want to update github, just use "git push". If you have commited several times, this command will upload all
+  versions, not just the latest ones.
