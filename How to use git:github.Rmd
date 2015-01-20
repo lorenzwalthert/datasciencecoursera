@@ -33,6 +33,7 @@ git push                pushes new versions to github
 git branch              tells you on which branch you are
 git checkout -b trans   creates new branch 
 git remote -v           lists all the url of branch in this wd
+git pull <url> master   pulls the master branch of the corresponding url, e.g. the url you get with the previous command
 git checkout master     switches back to the master branch
 git branch -D newBr     deletes the local branch newBr
 git push origin --delete fixlocal       deletes the branch remotely
