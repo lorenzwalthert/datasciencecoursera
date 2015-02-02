@@ -36,6 +36,7 @@ git remote -v           lists all the url of branch in this wd
 git pull <url> master   pulls the master branch of the corresponding url, e.g. the url you get with the previous command
 git checkout master     switches back to the master branch
 git branch -D newBr     deletes the local branch newBr
+git origin --set-upstream origin trans          after you created a local branch *trans*, this will push it up to github
 git push origin --delete fixlocal       deletes the branch remotely
 
 
@@ -45,3 +46,9 @@ git push origin --delete fixlocal       deletes the branch remotely
 - change the file and save it (not save as), but overwrite. and use "git add -A" and "git commit -a "message" "
 - if you want to update github, just use "git push". If you have commited several times, this command will upload all
   versions, not just the latest ones.
+  
+#Recovering (if deleted but not committed/stagged)
+git reset HEAD "Hello World.Rmd"        reomves the corresponding file from the "to be committed-list". This means to unstag
+git checkout -- <filename>
+git checkout -- .            for all files 
+
