@@ -5,6 +5,8 @@ date: "13. Januar 2015"
 output: html_document
 ---
 This provides a short introduction to how to use/sync update git and github. For further deatils, see slides of Coursera class.
+Basically, this is irrelevant, since github provides a very good explanation. Just create a new repository on git hub and follow the instructions.https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+
 
 # basic, usefull terminal commands
 ## directories in general
@@ -23,10 +25,10 @@ date            returns system date
 
 ## git commands
 ### git workflow
-
+git init                create a git repository in the current wd
 git add -A              adds all files in wd folder to the tracking for git and makes them ready to commit
 git remove HEAD xy.txt  removes *xy.txt* from tracking
-git commit -a "message" adds new versions of the documents on the tracking list that has been changed to the local repository
+git commit -m "message" adds new versions of the documents on the tracking list that has been changed to the local repository
 git push                pushes new versions to github
 
 ### git branch
@@ -41,12 +43,14 @@ git push origin --delete fixlocal       deletes the branch remotely
 
 
 ### to know about those commands
-- first, you need to create files and save them a first time
-- if you did, use git add -A and then "git commit -a "message" in order to save them in you local repository
-- change the file and save it (not save as), but overwrite. and use "git add -A" and "git commit -a "message" "
-- if you want to update github, just use "git push". If you have commited several times, this command will upload all
+* first, you need to create files and save them a first time
+* if you did, use git add -A and then "git commit -a "message" in order to save them in you local repository
+* change the file and save it (not save as), but overwrite. and use "git add -A" and "git commit -a "message" "
+* if you want to update github, just use "git push". If you have commited several times, this command will upload all
   versions, not just the latest ones.
-  
+
+#fork a repo
+git clone <url>         you need to have added it on github
 #Recovering (if deleted but not committed/stagged)
 git reset HEAD "Hello World.Rmd"        reomves the corresponding file from the "to be committed-list". This means to unstag
 git checkout -- <filename>

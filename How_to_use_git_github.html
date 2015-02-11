@@ -80,11 +80,11 @@ img {
 <h2>git commands</h2>
 <div id="git-workflow" class="section level3">
 <h3>git workflow</h3>
-<p>git add -A adds all files in wd folder to the tracking for git and makes them ready to commit git remove HEAD xy.txt removes <em>xy.txt</em> from tracking git commit -a “message” adds new versions of the documents on the tracking list that has been changed to the local repository git push pushes new versions to github</p>
+<p>git init create a git repository in the current wd git add -A adds all files in wd folder to the tracking for git and makes them ready to commit git remove HEAD xy.txt removes <em>xy.txt</em> from tracking git commit -a “message” adds new versions of the documents on the tracking list that has been changed to the local repository git push pushes new versions to github</p>
 </div>
 <div id="git-branch" class="section level3">
 <h3>git branch</h3>
-<p>git branch tells you on which branch you are git checkout -b trans creates new branch git remote -v lists all the url of branch in this wd git checkout master switches back to the master branch git branch -D newBr deletes the local branch newBr git push origin –delete fixlocal deletes the branch remotely</p>
+<p>git branch tells you on which branch you are git checkout -b trans creates new branch git remote -v lists all the url of branch in this wd git pull <url> master pulls the master branch of the corresponding url, e.g. the url you get with the previous command git checkout master switches back to the master branch git branch -D newBr deletes the local branch newBr git origin –set-upstream origin trans after you created a local branch <em>trans</em>, this will push it up to github git push origin –delete fixlocal deletes the branch remotely</p>
 </div>
 <div id="to-know-about-those-commands" class="section level3">
 <h3>to know about those commands</h3>
@@ -96,6 +96,10 @@ img {
 </ul>
 </div>
 </div>
+</div>
+<div id="fork-a-repo" class="section level1">
+<h1>fork a repo</h1>
+<p>git clone <url> you need to have added it on github #Recovering (if deleted but not committed/stagged) git reset HEAD “Hello World.Rmd” reomves the corresponding file from the “to be committed-list”. This means to unstag git checkout – <filename> git checkout – . for all files</p>
 </div>
 
 
