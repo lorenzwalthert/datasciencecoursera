@@ -8,8 +8,10 @@ pollutantmean <- function(directory = "specdata", pollutant = "sulfate", id = 1:
         for(i in 1:length(id)) {
                 if ( id[i] <= 9 ) {
                         name[i]<-paste("00", id[i], ".csv", sep = "")
-                } else if ( id[i] > 9 & id[i] < 99) {
+                } else if ( id[i] > 9 & id[i] <= 99) {
                         name[i]<-paste("0", id[i], ".csv", sep = "")
+                } else if (id[i] > 99) {
+                        name[i]<-paste(id[i], ".csv", sep = "")
                 }
         }
 
