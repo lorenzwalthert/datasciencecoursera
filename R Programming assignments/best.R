@@ -16,7 +16,7 @@ best<-function(state, outcome) {
         # if state is valid
         if((state %in% raw$State) == T) {
                 
-                lis<<-subset(raw, select = c("Hospital.Name", outc, "State")) # extract relevant info
+                lis<-subset(raw, select = c("Hospital.Name", outc, "State")) # extract relevant info
                 lis<-lis[lis$State == state,] # select relevant state
                 
                 lis[,2]<-as.character(lis[,2])
@@ -25,7 +25,8 @@ best<-function(state, outcome) {
                 lis[, 2]<-as.numeric(lis[, 2])
                 
                 best<-min(lis[, 2], na.rm = T)
-                final<-subset(lis, lis[, 2] == best, select = "Hospital.Name")
+                final<<-subset(lis, lis[, 2] == best, select = "Hospital.Name")
+                final<<-as.character(as.array(final[,1]))
                 print(final)
                 
                 
